@@ -3,10 +3,12 @@
 ################################################################################
 
 /.vs
+/packages
 /Application/Api/PersonalPlace.Application.Api.Host/bin
 /Application/Api/PersonalPlace.Application.Api.Host/obj
 /Application/Api/PersonalPlace.Application.Api.Services/bin
 /Application/Api/PersonalPlace.Application.Api.Services/obj
+/Application/Api/Tests/PersonalPlace.Application.Api.Tests/bin
 /Application/Api/Tests/PersonalPlace.Application.Api.Tests/obj
 /Domain/Base/PersonalPlace.Domain.Base/bin
 /Domain/Base/PersonalPlace.Domain.Base/obj
