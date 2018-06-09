@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Automapper" Version="6.2.2" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Domain\PersonalPlace.Domain.Contract\PersonalPlace.Domain.Contract.csproj" />
+    <ProjectReference Include="..\..\..\Domain\PersonalPlace.Domain.IoCM\PersonalPlace.Domain.IoCM.csproj" />
+    <ProjectReference Include="..\..\..\Infra\Crosscutting\Log\Pactor.Infra.Crosscutting.Log\Pactor.Infra.Crosscutting.Log.csproj" />
+    <ProjectReference Include="..\..\..\Infra\DAL\ORM\Pactor.Infra.DAL.ORM\Pactor.Infra.DAL.ORM.csproj" />
+  </ItemGroup>
+
+</Project>

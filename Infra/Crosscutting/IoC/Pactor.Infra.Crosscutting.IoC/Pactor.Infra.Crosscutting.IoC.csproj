@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>Pactor.IoC</PackageId>
+    <Authors>Daniel Rocha</Authors>
+    <Company>Pactor Technologies</Company>
+    <Product>Pactor Application Infraestructure</Product>
+    <Copyright>Pactor Technologies</Copyright>
+    <PackageTags>pactor, infra, infrastructure, ioc, dependency, injection, container</PackageTags>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.8.1" />
+  </ItemGroup>
+
+</Project>

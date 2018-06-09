@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Product>Pactor Application Infrastructure</Product>
+    <Company>Pactor Technologies</Company>
+    <Authors>Daniel Rocha</Authors>
+    <Copyright>Pactor Technologies</Copyright>
+    <PackageTags>pactor, infra, crosscutting, security, encryption, hashing, hash</PackageTags>
+  </PropertyGroup>
+
+</Project>

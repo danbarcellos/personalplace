@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="7.6.0-preview1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Base\PersonalPlace.Domain.Base\PersonalPlace.Domain.Base.csproj" />
+    <ProjectReference Include="..\PersonalPlace.Domain.Entities\PersonalPlace.Domain.Entities.csproj" />
+  </ItemGroup>
+
+</Project>

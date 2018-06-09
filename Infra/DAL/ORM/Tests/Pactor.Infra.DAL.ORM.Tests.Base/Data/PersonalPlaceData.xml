@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PersonalPlaceDataSet xmlns="http://tempuri.org/PersonalPlaceDataSet.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://tempuri.org/PersonalPlaceDataSet.xsd file:PersonalPlaceDataSet.xsd">
+  <User>
+    <UserID>A4008BDA-989B-45CC-8B88-5C94463D6054</UserID>
+    <Version>1</Version>
+    <FirstName>Personal Place</FirstName>
+    <LastName>System</LastName>
+    <Password>0</Password>
+    <Email>pp@sys</Email>
+    <ChangePasswordRequired>0</ChangePasswordRequired>
+    <StateType>1</StateType>
+    <StateDateTime>2018-05-01T00:00:00.00</StateDateTime>
+    <AssignerUser>A4008BDA-989B-45CC-8B88-5C94463D6054</AssignerUser>
+    <ScopeTag>1.</ScopeTag>
+  </User>
+</PersonalPlaceDataSet>

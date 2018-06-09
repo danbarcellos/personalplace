@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>Pactor.ORM.Dapper</PackageId>
+    <Company>Pactor Technologies</Company>
+    <Product>Pactor Application Infrastructure</Product>
+    <Copyright>Pactor Technologies</Copyright>
+    <PackageTags>pactor, infra, infrastructure, database, orm, micro, dapper</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="SQL\SS\SS_GetById.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="SQL\SS\SS_GetById.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="1.50.5" />
+    <PackageReference Include="DapperExtensions" Version="1.6.3" />
+    <PackageReference Include="FluentValidation" Version="7.6.0-preview1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Crosscutting\Log\Pactor.Infra.Crosscutting.Log\Pactor.Infra.Crosscutting.Log.csproj" />
+    <ProjectReference Include="..\Pactor.Infra.DAL.ORM\Pactor.Infra.DAL.ORM.csproj" />
+  </ItemGroup>
+
+</Project>

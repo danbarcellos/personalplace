@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.8.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Infra\DAL\ORM\Pactor.Infra.DAL.ORM.NHibernate\Pactor.Infra.DAL.ORM.NHibernate.csproj" />
+    <ProjectReference Include="..\Base\PersonalPlace.Domain.Base\PersonalPlace.Domain.Base.csproj" />
+    <ProjectReference Include="..\PersonalPlace.Domain.Queries\PersonalPlace.Domain.Queries.csproj" />
+  </ItemGroup>
+
+</Project>

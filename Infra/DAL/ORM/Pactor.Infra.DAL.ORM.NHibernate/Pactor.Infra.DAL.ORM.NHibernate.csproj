@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Daniel Rocha</Authors>
+    <Company>Pactor Technologies</Company>
+    <Product>Pactor Application Infrastructure</Product>
+    <Copyright>Pactor Technologies</Copyright>
+    <PackageTags>pactor, infra, dal, orm, nhibernate, data, repository, session</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="SQL\SS\NormalizeObjectNames.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="SQL\SS\NormalizeObjectNames.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.8.1" />
+    <PackageReference Include="FluentValidation" Version="7.6.0-preview1" />
+    <PackageReference Include="NHibernate" Version="5.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Domain\Base\PersonalPlace.Domain.Base\PersonalPlace.Domain.Base.csproj" />
+    <ProjectReference Include="..\..\..\Crosscutting\IoC\Pactor.Infra.Crosscutting.IoCCore\Pactor.Infra.Crosscutting.IoCCore.csproj" />
+    <ProjectReference Include="..\..\..\Crosscutting\IoC\Pactor.Infra.Crosscutting.IoC\Pactor.Infra.Crosscutting.IoC.csproj" />
+    <ProjectReference Include="..\..\..\Crosscutting\Log\Pactor.Infra.Crosscutting.Log\Pactor.Infra.Crosscutting.Log.csproj" />
+    <ProjectReference Include="..\Pactor.Infra.DAL.ORM\Pactor.Infra.DAL.ORM.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions">
+      <HintPath>..\..\..\..\..\..\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.extensions.configuration.abstractions\2.0.2\lib\netstandard2.0\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SqlClient">
+      <HintPath>..\..\..\..\..\..\..\..\..\Program Files\dotnet\sdk\NuGetFallbackFolder\system.data.sqlclient\4.4.0\ref\netstandard2.0\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

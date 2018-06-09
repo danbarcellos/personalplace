@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Product>Pactor Application Infraestructure</Product>
+    <Company>Pactor Technologies</Company>
+    <Authors>Daniel Rocha</Authors>
+    <PackageId>Pactor.Log</PackageId>
+    <PackageTags>pactor, infra, infrastructure, log, logger, log4net</PackageTags>
+    <Copyright>Pactor Technologies</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.5.0" />
+  </ItemGroup>
+
+</Project>

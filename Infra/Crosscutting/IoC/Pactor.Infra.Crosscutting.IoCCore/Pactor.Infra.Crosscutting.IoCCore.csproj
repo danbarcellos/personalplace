@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Pactor.Infra.Crosscutting.IoC.Core</RootNamespace>
+    <PackageId>Pactor.IoC.Core</PackageId>
+    <Authors>Daniel Rocha</Authors>
+    <Company>Legião da Boa Vontade</Company>
+    <Product>Pactor Application Infraestructure</Product>
+    <PackageTags>pactor, infra, infrastructure, ioc, dependency, injection, container</PackageTags>
+    <Copyright>Pactor Technologies</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.8.1" />
+    <PackageReference Include="Autofac.Extras.CommonServiceLocator" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Pactor.Infra.Crosscutting.IoC\Pactor.Infra.Crosscutting.IoC.csproj" />
+  </ItemGroup>
+
+</Project>

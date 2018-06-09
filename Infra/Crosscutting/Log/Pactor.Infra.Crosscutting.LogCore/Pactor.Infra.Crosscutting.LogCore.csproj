@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Product>Pactor Application Infrastructure</Product>
+    <Authors>Daniel Rocha</Authors>
+    <Company>Pactor Technologies</Company>
+    <PackageId>Pactor.Log.Core</PackageId>
+    <PackageTags>pactor, infra, infrastructure, log, logger, log4net</PackageTags>
+    <Copyright>Pactor Technologies</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NLog" Version="4.5.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Pactor.Infra.Crosscutting.Log\Pactor.Infra.Crosscutting.Log.csproj" />
+  </ItemGroup>
+
+</Project>

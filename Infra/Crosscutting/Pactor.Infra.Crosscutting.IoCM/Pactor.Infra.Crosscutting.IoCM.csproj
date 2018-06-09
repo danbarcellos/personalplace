@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.8.1" />
+    <PackageReference Include="NLog" Version="4.5.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Log\Pactor.Infra.Crosscutting.LogCore\Pactor.Infra.Crosscutting.LogCore.csproj" />
+    <ProjectReference Include="..\Security\Pactor.Infra.Crosscutting.Security\Pactor.Infra.Crosscutting.Security.csproj" />
+  </ItemGroup>
+
+</Project>

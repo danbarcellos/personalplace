@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="SQL\SS\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Infra\DAL\ORM\Pactor.Infra.DAL.ORM.NHibernate\Pactor.Infra.DAL.ORM.NHibernate.csproj" />
+    <ProjectReference Include="..\PersonalPlace.Domain.Contract\PersonalPlace.Domain.Contract.csproj" />
+    <ProjectReference Include="..\PersonalPlace.Domain.Entities\PersonalPlace.Domain.Entities.csproj" />
+  </ItemGroup>
+
+</Project>

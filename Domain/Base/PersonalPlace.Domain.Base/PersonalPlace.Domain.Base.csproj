@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NHibernate" Version="5.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Infra\Crosscutting\IoC\Pactor.Infra.Crosscutting.IoCCore\Pactor.Infra.Crosscutting.IoCCore.csproj" />
+    <ProjectReference Include="..\..\..\Infra\Crosscutting\Security\Pactor.Infra.Crosscutting.Security\Pactor.Infra.Crosscutting.Security.csproj" />
+    <ProjectReference Include="..\..\..\Infra\DAL\ORM\Pactor.Infra.DAL.ORM\Pactor.Infra.DAL.ORM.csproj" />
+    <ProjectReference Include="..\..\PersonalPlace.Domain.Common\PersonalPlace.Domain.Common.csproj" />
+  </ItemGroup>
+
+</Project>

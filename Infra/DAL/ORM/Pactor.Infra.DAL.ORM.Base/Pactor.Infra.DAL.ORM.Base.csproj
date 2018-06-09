@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="7.6.0-preview1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Crosscutting\IoC\Pactor.Infra.Crosscutting.IoC\Pactor.Infra.Crosscutting.IoC.csproj" />
+    <ProjectReference Include="..\..\..\Crosscutting\Security\Pactor.Infra.Crosscutting.Security\Pactor.Infra.Crosscutting.Security.csproj" />
+    <ProjectReference Include="..\Pactor.Infra.DAL.ORM\Pactor.Infra.DAL.ORM.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Configuration">
+      <HintPath>..\..\..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Profile\Client\System.Configuration.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

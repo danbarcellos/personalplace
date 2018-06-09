@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Domain\Base\PersonalPlace.Domain.Base\PersonalPlace.Domain.Base.csproj" />
+    <ProjectReference Include="..\Pactor.Infra.DAL.ORM.NHibernate\Pactor.Infra.DAL.ORM.NHibernate.csproj" />
+    <ProjectReference Include="..\Pactor.Infra.DAL.ORM\Pactor.Infra.DAL.ORM.csproj" />
+  </ItemGroup>
+
+</Project>

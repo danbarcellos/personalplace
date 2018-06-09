@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="4.2.2" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.8" />
+    <PackageReference Include="NHibernateProfiler.Appender" Version="5.0.5023" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Domain\Base\PersonalPlace.Domain.Base.ORM\PersonalPlace.Domain.Base.ORM.csproj" />
+    <ProjectReference Include="..\..\..\Infra\Crosscutting\IoC\Pactor.Infra.Crosscutting.IoCCore\Pactor.Infra.Crosscutting.IoCCore.csproj" />
+    <ProjectReference Include="..\..\..\Infra\Crosscutting\Log\Pactor.Infra.Crosscutting.LogCore\Pactor.Infra.Crosscutting.LogCore.csproj" />
+    <ProjectReference Include="..\..\..\Infra\Crosscutting\ObjectMapper\Pactor.Infra.Crosscutting.ObjectMapper\Pactor.Infra.Crosscutting.ObjectMapper.csproj" />
+    <ProjectReference Include="..\..\..\Infra\Crosscutting\Pactor.Infra.Crosscutting.IoCM\Pactor.Infra.Crosscutting.IoCM.csproj" />
+    <ProjectReference Include="..\..\..\Infra\DAL\ORM\Pactor.Infra.DAL.ORM.IoCM\Pactor.Infra.DAL.ORM.IoCM.csproj" />
+    <ProjectReference Include="..\..\..\Infra\DAL\ORM\Pactor.Infra.DAL.ORM.NHibernate\Pactor.Infra.DAL.ORM.NHibernate.csproj" />
+    <ProjectReference Include="..\PersonalPlace.Application.Api.Services\PersonalPlace.Application.Api.Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="nlog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="NLog.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NHibernate" Version="5.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Infra\DAL\ORM\Pactor.Infra.DAL.ORM.NHibernate\Pactor.Infra.DAL.ORM.NHibernate.csproj" />
+    <ProjectReference Include="..\..\PersonalPlace.Domain.Entities\PersonalPlace.Domain.Entities.csproj" />
+    <ProjectReference Include="..\..\PersonalPlace.Domain.Queries\PersonalPlace.Domain.Queries.csproj" />
+    <ProjectReference Include="..\..\PersonalPlace.Domain.Validation\PersonalPlace.Domain.Validation.csproj" />
+    <ProjectReference Include="..\PersonalPlace.Domain.Base\PersonalPlace.Domain.Base.csproj" />
+  </ItemGroup>
+
+</Project>
