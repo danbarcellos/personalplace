@@ -3,6 +3,7 @@
 ################################################################################
 
 /.vs
+/.vscode
 /packages
 /Application/Api/PersonalPlace.Application.Api.Host/bin
 /Application/Api/PersonalPlace.Application.Api.Host/obj
