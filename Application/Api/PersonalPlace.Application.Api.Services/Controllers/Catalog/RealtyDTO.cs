@@ -37,5 +37,7 @@ namespace PersonalPlace.Application.Api.Services.Controllers.Catalog
         public IEnumerable<AmenityDTO> Amenities { get; set; }
 
         public IEnumerable<CommentDTO> Comments { get; set; }
+
+        public IEnumerable<string> Images { get; set; }
     }
 }

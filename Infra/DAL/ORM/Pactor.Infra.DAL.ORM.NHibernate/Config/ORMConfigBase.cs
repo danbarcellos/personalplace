@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Text;
 using Autofac;
 using NHibernate.Cfg;
 using NHibernate.Cfg.MappingSchema;

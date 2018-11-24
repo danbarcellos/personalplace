@@ -63,3 +63,7 @@
 /Infra/DAL/ORM/Tests/Pactor.Infra.DAL.ORM.Tests.Base/obj
 /Infra/DAL/ORM/Tests/Pactor.Infra.DAL.ORM.Tests.Base/Data/PersonalPlaceDataSet.xsc
 /Infra/DAL/ORM/Tests/Pactor.Infra.DAL.ORM.Tests.Base/Data/PersonalPlaceDataSet.xss
+/Infra/DAL/ORM/Tests/Pactor.Infra.DAL.ORM.Tests/bin/Debug/netcoreapp2.0
+/Infra/Crosscutting/IoC/Tests/Pactor.Infra.Crosscutting.IoC.Tests/bin/Debug/netcoreapp2.0
+/Infra/Crosscutting/Log/Tests/Pactor.Infra.Crosscutting.Log.Tests/bin/Debug/netcoreapp2.0
+/Infra/DAL/ORM/Pactor.Infra.DAL.ORM.Dapper/bin/Debug/netstandard2.0

@@ -5,6 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="HBM\RealtyByDistance.hbm.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="HBM\RealtyByDistance.hbm.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="SQL\SS\" />
   </ItemGroup>
 

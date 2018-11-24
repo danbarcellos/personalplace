@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using NHibernate.Util;
 using PersonalPlace.Domain.Base;
 using PersonalPlace.Domain.Base.Component;
 using PersonalPlace.Domain.Common.Exception;
@@ -71,6 +73,9 @@ namespace PersonalPlace.Domain.Entities.Catalog
         private ISet<Comment> _comments;
         public virtual IEnumerable<Comment> Comments => _comments;
 
+        private ISet<RealtyImage> _images;
+        public virtual IEnumerable<RealtyImage> Images => _images;
+
         public virtual void AddFloorplan(Floorplan floorplan)
         {
             if (floorplan.Realty.Id != Id)
@@ -82,13 +87,18 @@ namespace PersonalPlace.Domain.Entities.Catalog
             _floorplans.Add(floorplan);
         }
 
-        public virtual void RemoveFloorplan(Floorplan floorplan)
+        public virtual void AddImage(RealtyImage realtyImage)
         {
-            if (!_floorplans.Contains(floorplan))
-                return;
+            if (realtyImage == null)
+                throw new DomainEntityException("Attempt to add a image to the realty");
 
-            _floorplans.Remove(floorplan);
+            if (!(Uri.TryCreate(realtyImage.Url, UriKind.Absolute, out var uriResult) && uriResult.Scheme == Uri.UriSchemeHttp))
+                throw new DomainEntityException("Invalid realty image url");
+
+            if (_images.All(x => x.Url != realtyImage.Url))
+                _images.Add(realtyImage);
         }
+
         public virtual void AddAmenity(Amenity amenity)
         {
             if (amenity.Realty.Id != Id)
@@ -126,12 +136,33 @@ namespace PersonalPlace.Domain.Entities.Catalog
             _comments.Remove(comment);
         }
 
+        public virtual void RemoveImage(RealtyImage realtyImage)
+        {
+            if (realtyImage == null || _images.All(x => x.Url != realtyImage.Url))
+                return;
+
+            if (!(Uri.TryCreate(realtyImage.Url, UriKind.Absolute, out var uriResult) && uriResult.Scheme == Uri.UriSchemeHttp))
+                throw new DomainEntityException("Invalid realty image url");
+
+            if (_images.All(x => x.Url != realtyImage.Url))
+                _images.Add(realtyImage);
+        }
+
+        public virtual void RemoveFloorplan(Floorplan floorplan)
+        {
+            if (!_floorplans.Contains(floorplan))
+                return;
+
+            _floorplans.Remove(floorplan);
+        }
+
         protected override void InitializeInternalCollections()
         {
             base.InitializeInternalCollections();
             _floorplans = new HashSet<Floorplan>();
             _amenities = new HashSet<Amenity>();
             _comments = new HashSet<Comment>();
+            _images = new HashSet<RealtyImage>();
         }
     }
 }
