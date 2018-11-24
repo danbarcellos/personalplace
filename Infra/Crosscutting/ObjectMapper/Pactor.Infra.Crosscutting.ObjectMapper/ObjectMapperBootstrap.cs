@@ -47,8 +47,12 @@ namespace Pactor.Infra.Crosscutting.ObjectMapper
                         cfg.AddProfile(profile);
                     }
                 });
-
+            
             var mapper = config.CreateMapper();
+
+            builder.RegisterInstance(config)
+                   .As<IConfigurationProvider>()
+                   .SingleInstance();
 
             builder.RegisterInstance(mapper)
                    .As<IMapper>()
@@ -100,7 +104,7 @@ namespace Pactor.Infra.Crosscutting.ObjectMapper
 
         private static Assembly LoadProfileModuleAssembly(string dllFilePathAndName)
         {
-            return Assembly.LoadFile(dllFilePathAndName);
+            return Assembly.LoadFrom(dllFilePathAndName);
         }
     }
 }

@@ -6,7 +6,7 @@ namespace PersonalPlace.Application.Api.Services.Controllers.Security
     [Route("api/[controller]")]
     public class AuthenticationController : Controller
     {
-        private const string InvalidAutentication = "Invalid username or password";
+        private const string InvalidAuthentication = "Invalid username or password";
         private readonly IUserByEmail _userByEmailQuery;
 
         public AuthenticationController(IUserByEmail userByEmailQuery)
@@ -21,13 +21,13 @@ namespace PersonalPlace.Application.Api.Services.Controllers.Security
             if (authenticationDto.Email == null 
                 || string.IsNullOrWhiteSpace(authenticationDto.Email)
                 ||string.IsNullOrWhiteSpace(authenticationDto.Password))
-                return AuthencitationResult.Fail(InvalidAutentication);
+                return AuthencitationResult.Fail(InvalidAuthentication);
 
             _userByEmailQuery.Email = authenticationDto.Email;
             var user = _userByEmailQuery.Execute();
 
             return user.Password != authenticationDto.Password
-                ? AuthencitationResult.Fail(InvalidAutentication) 
+                ? AuthencitationResult.Fail(InvalidAuthentication) 
                 : AuthencitationResult.Pass();
         }
     }
