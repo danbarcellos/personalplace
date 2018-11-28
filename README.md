@@ -2,15 +2,15 @@
 
 ### Detalhes de Implementação
 ##### Versão 0.5.1 Alpha
-* #### Plataforma .NET Core 2.0
+* #### Plataforma .NET Core 2.1
   * API REST por meio de ASP.Net Core
   * Banco de Dados SQL Server 2017
-  * ORM NHibernate 5.1.2
+  * ORM NHibernate 5.1.3
   * ORM Dapper
   * Injeção de Dependência com Autofac
   * Mapeamento de Objetos com AutoMapper
   * Infraestrurua de Log com NLog
-  * SPA Angular/TypedScript
+  * SPA Ionic/Angular/TypedScript
   * Validação de dados com FluentValidation
   * Segurança com Encriptação/Obfuscação Rijndael/SHA512
 
@@ -23,6 +23,7 @@
     * As entidadas são criadas no projeto `PersonalPlace.Domain.Entities` e a infraestrutura de mapeamento automático reflete a entidade criada e seu mapeamento no data schema, sem a necessidade de notação (atributos), XML ou outros artifícios, as entidades são POCO em absoluto.
     * Detalhes de mapeando fino podem ser personalizados em `PersonalPlace.Domain.Base.ORM`
   * Compatível com Windows e Linux
+  * App Hybrid Ionic/Cordova
   
 ### Roadmap
 
@@ -42,11 +43,10 @@
   * Cache distribuído
   * Container Docker 
   * Teste de produção
-  * Aplicação Mobile
+  * Aplicação Mobile Ionic
   * Monitoramento por Logstash
 * #### Novembro/2018 (versão 1.0.0 beta)
   * Features finais
   * Teste de carga
   * Release candidato
-* #### Dezembro/2018
   * Entrega
