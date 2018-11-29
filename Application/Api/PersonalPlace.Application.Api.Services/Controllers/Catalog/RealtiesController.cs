@@ -19,9 +19,9 @@ namespace PersonalPlace.Application.Api.Services.Controllers.Catalog
         private readonly IRepository<Client> _clientRepository;
         private readonly IRealtyByDistance _realtyByDistanceQuery;
 
-        public RealtiesController(ILog logger, 
-                                  IMapper mapper, 
-                                  IRealtyById realtyByIdQuery, 
+        public RealtiesController(ILog logger,
+                                  IMapper mapper,
+                                  IRealtyById realtyByIdQuery,
                                   IRealtiesPage realtiesPageQuery,
                                   IRealtyByDistance realtyByDistanceQuery,
                                   IRepository<Client> clientRepository)
@@ -56,23 +56,14 @@ namespace PersonalPlace.Application.Api.Services.Controllers.Catalog
             }
         }
 
-        [HttpGet("{lat}/{lon}/{dist}")]
-        public RealtyDistanceDto[] Get(string lat, string lon, string dist)
+        [HttpGet("{lat:double}/{lon:double}/{dist:int}")]
+        public RealtyDistanceDto[] Get(double lat, double lon, int dist)
         {
-            if (string.IsNullOrWhiteSpace(lat) 
-                || string.IsNullOrWhiteSpace(lon) 
-                || string.IsNullOrWhiteSpace(dist)
-                || !double.TryParse(lat, out var latitude)
-                || !double.TryParse(lon, out var longitude)
-                || !int.TryParse(dist, out var distance))
-                return Array.Empty<RealtyDistanceDto>();
-
-
             try
             {
-                _realtyByDistanceQuery.Latitude = latitude;
-                _realtyByDistanceQuery.Longitude = longitude;
-                _realtyByDistanceQuery.Distance = distance;
+                _realtyByDistanceQuery.Latitude = lat;
+                _realtyByDistanceQuery.Longitude = lon;
+                _realtyByDistanceQuery.Distance = dist;
                 var realtyDistanceDtos = _realtyByDistanceQuery.Execute();
                 return realtyDistanceDtos;
             }

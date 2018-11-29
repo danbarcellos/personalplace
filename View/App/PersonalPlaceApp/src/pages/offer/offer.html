@@ -1,0 +1,18 @@
+<div class="modalBg">
+    <ion-card class="offerCard">
+        <h1 class="offerTitle">Oferta!</h1>
+        <img [src]="product.img">
+        <h4 class="productTitle">{{product.name}}</h4>
+        <ul>
+            <li>{{product.feature1}}</li>
+            <li>{{product.feature2}}</li>
+            <li>{{product.feature3}}</li>
+            <li>{{product.feature4}}</li>
+            <li>{{product.feature5}}</li>
+        </ul>
+        <h4 class="productTitle">{{product.price}}</h4>
+        <rating [rate]="product.rate" readonly="true" small="false">
+        </rating>
+        <button ion-button block (click)='onCloseOffer()'>Fechar</button>
+    </ion-card>
+</div>

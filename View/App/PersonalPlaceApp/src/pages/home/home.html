@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <img src="assets/imgs/MainSpot.png">
+  <ion-row class="oportunitiesBar" align-items-center>
+    <ion-col><h4 ion-text color="light" class="productTitle">Oportunidades</h4></ion-col>
+  </ion-row>
+  <div class="carrouselWrap">
+    <div class="carrouselItems">
+      <img [src]="item.img" *ngFor="let item of products" class="carrouselItem" (click)="onSelected(item)">
+    </div>
+  </div>
+  <ion-row nowrap>
+    <ion-col class="detailCol">
+      <h4 *ngIf="selectedItem" class="productTitle">{{selectedItem.name}}</h4>
+      <ul *ngIf="selectedItem">
+        <li>{{selectedItem.feature1}}</li>
+        <li>{{selectedItem.feature2}}</li>
+        <li>{{selectedItem.feature3}}</li>
+        <li>{{selectedItem.feature4}}</li>
+        <li>{{selectedItem.feature5}}</li>        
+      </ul>
+      <h4 *ngIf="selectedItem" class="productTitle">{{selectedItem.price}}</h4>
+      <rating *ngIf="selectedItem" [rate]="selectedItem.rate"
+        readonly="true" 
+        small="false">
+      </rating>
+    </ion-col>
+    <ion-col class="iconsCol">
+      <button class="likeButtom">
+          <ion-icon class="likeIcon" name="heart" color="gray">            
+          </ion-icon>
+      </button>
+      <br>
+      <ion-icon class="bestSellerIcon" name="trophy" color="gray"></ion-icon>      
+    </ion-col>
+  </ion-row>    
+</ion-content>
